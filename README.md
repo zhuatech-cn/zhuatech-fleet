@@ -107,3 +107,7 @@ curl -u admin:admin123 -H 'Content-Type: application/json' \
 本仓库不包含真实业务数据、真实生产接口凭据或生产配置。请勿提交个人隐私与业务敏感信息、访问令牌、私钥或真实业务数据。安全问题请按 [SECURITY.md](SECURITY.md) 私下报告；参与开发前请阅读 [CONTRIBUTING.md](CONTRIBUTING.md)。
 
 关键词：知华科技 FLEET、车队管理系统、车辆运营管理、运输调度平台、Java 车队系统、Spring Boot FLEET、Vue 企业管理系统、上海软件定制开发。
+
+## 出车维保门禁
+
+新增 `POST /api/fleet/insights/trip-maintenance-gate`。发车前综合车辆里程、保养周期、计划行程、故障告警、制动与轮胎状态进行判定，输出 `READY`、`SERVICE_SOON` 或 `BLOCK_DISPATCH`，让调度员能够提前识别途中超保和关键安全风险。
