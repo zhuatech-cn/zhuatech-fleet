@@ -111,3 +111,7 @@ curl -u admin:admin123 -H 'Content-Type: application/json' \
 ## 出车维保门禁
 
 新增 `POST /api/fleet/insights/trip-maintenance-gate`。发车前综合车辆里程、保养周期、计划行程、故障告警、制动与轮胎状态进行判定，输出 `READY`、`SERVICE_SOON` 或 `BLOCK_DISPATCH`，让调度员能够提前识别途中超保和关键安全风险。
+
+## 企业级人车合规发车门禁
+
+新增 `POST /api/enterprise/fleet/driver-vehicle-compliance`，覆盖证照、准驾车型、驾驶时长、酒精检测、车辆检查、保险、载重和路线应急保障，输出 `CLEARED / REVIEW / BLOCKED`。详见 [人车合规说明](docs/ENTERPRISE_DRIVER_VEHICLE_COMPLIANCE.md)。
